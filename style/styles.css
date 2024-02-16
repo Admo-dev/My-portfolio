@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.page-1 {
+  background-image: url(image-gradient-300.webp);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 190px;
+}
+
+.page-1 nav {
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  padding: 10px 0;
+}
+
+nav .logo {
+  color: white;
+  flex: 1;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  padding-left: 100px;
+}
+
+nav .link {
+  flex: 1;
+}
+
+nav .link a:not(:last-child) {
+  margin-right: 100px;
+}
+
+nav .logo span {
+  color: #00cbd2;
+}
+
+nav .link a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: all, 0.3s;
+  display: inline-block;
+}
+
+nav .link a:hover {
+  color: #00cbd2;
+  transform: scale(1.2);
+}
+
+.page-1 .name p {
+  color: white;
+  padding-left: 100px;
+  line-height: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-1 .name p:first-child {
+ color: #BDB6C6;
+ font-weight: 500;
+}
+
+.page-1 .name p span {
+  color: #00cbd2;
+}
+
+.page-1 .name p:nth-child(2) {
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.page-1 .name p:nth-child(3) {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.page-1 .social-links {
+  padding-left: 100px;
+  margin-top: -120px;
+}
+
+.page-1 .social-links a {
+  
+  display: inline-block;
+  transition: all, 0.3s;
+}
+
+.page-1 .social-links i {
+  color: #00cbd2;
+  font-size: 40px;
+  transition: color, 0.3s;
+}
+
+.page-1 .social-links i:hover {
+  color: white;
+}
+
+.page-1 .social-links a:hover {
+  transform: translateY(-8px);
+}
+
+.page-1 .social-links a:not(:last-child){
+  margin-right: 50px;
+}
+
+.page-1 label i {
+  color: white;
+  font-size: 1.6rem;
+  transition: all, 0.3s;
+}
+
+.page-1 label i:hover {
+  color:#00cbd2;
+  transform: scale(1.2);
+}
+
+.page-1 label {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1125px) {
+  .page-1 .link {
+    display: none;
+  }
+
+  .page-1 label {
+    display: block;
+    padding-right: 50px;
+    z-index: 100;
+  }
+
+  .page-1 label i:nth-child(2) {
+    display: none;
+  }
+
+  #check:checked ~ .page-1 label i:nth-child(1) {
+    display: none;
+  }
+  #check:checked ~ .page-1 label i:nth-child(2) {
+    display: block;
+    
+  }
+
+  #check:checked ~ .page-1 .link {
+    display: block;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 100px;
+  }
+
+  .page-1 .link a:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .page-1 .link a {
+    font-size: 1.2rem;
+  }
+}
+
+.page-2 {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 40% ;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.page-2 img{
+  width: 100%;
+  border-radius: 30px;
+}
+
+.page-2 .info {
+  padding: 30px 30px;
+}
+
+.page-2 .info div {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.page-2 .heading {
+  font-size: 60px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.page-2 .sub-heading {
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.page-2 .info .about {
+padding-bottom: 60px;
+line-height: 25px;
+color: #BDB6C6;
+}
+
+.page-2 button {
+  padding: 15px 35px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  background-color: #00b4ba;
+  transition: all, 0.3s;
+}
+
+
+.page-2 button:hover {
+  background-color: #00898e;
+  transform: scale(1.2);
+}
+
+.page-2 button:active {
+  background-color: white;
+  color: #00b4ba;
+}
+
+@media (max-width: 1125px) {
+  .page-2 {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+  }
+
+  .page-2 img {
+    width: 100%;
+  }
+  .page-2 .picture {
+    max-width: 30%;
+  }
+
+  .page-2 .info {
+    max-width: 40%;
+  }
+}
+
+.page-3 {
+  background-color: black;
+  min-height: 150vh;
+  display: grid;
+  grid-template-rows: 20% 30%;
+  padding-top: 100px;
+}
+
+.page-3 .heading {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.page-3 .skill {
+  color: white;
+  display: grid;
+  grid-template-columns: 30% 30%;
+  justify-content: center;
+  text-align: center;
+  column-gap: 50px;
+}
+
+.page-3 img {
+  max-width: 30%;
+}
+
+.page-3 .skill-heading {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.page-3 .info {
+  color: #BDB6C6;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.page-3 .skill-1,.skill-2 {
+  background-color: rgb(38, 38, 38);
+  padding: 30px;
+  border-radius: 20px;
+}
