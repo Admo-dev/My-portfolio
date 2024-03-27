@@ -12,20 +12,31 @@ body::-webkit-scrollbar {
 }
 
 .page-1 {
-  background-image: url(image-gradient-300.webp);
-  min-height: 100vh;
+  background-image: url(image-gradient-300.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
-  row-gap: 190px;
+  row-gap: 200px;
+  padding: 40px 0 40px 0;
+}
+
+.page-1:after {
+  position: absolute;
+  height: 100%;
+  content: " ";
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0) 70%, rgba(0,0,0,0.65) 100%);
 }
 
 .page-1 nav {
   display: flex;
   align-items: center;
   padding-left: 100px;
-  padding: 10px 0;
+  padding: 0px 0;
+  z-index: 1;
 }
 
 nav .logo {
@@ -93,6 +104,7 @@ nav .link a:hover {
 .page-1 .social-links {
   padding-left: 100px;
   margin-top: -120px;
+  z-index: 1;
 }
 
 .page-1 .social-links a {
@@ -103,7 +115,7 @@ nav .link a:hover {
 
 .page-1 .social-links i {
   color: #00cbd2;
-  font-size: 40px;
+  font-size: 30px;
   transition: color, 0.3s;
 }
 
@@ -186,16 +198,16 @@ nav .link a:hover {
 }
 
 .page-2 {
-  min-height: 100vh;
   display: grid;
   grid-template-columns: 25% 40% ;
   align-items: center;
   justify-content: center;
   background-color: black;
+  padding: 50px;
 }
 
 .page-2 img{
-  width: 100%;
+  width: 80%;
   border-radius: 30px;
 }
 
@@ -220,10 +232,15 @@ nav .link a:hover {
   font-size: 20px;
 }
 
+.page-2 .sub-heading span {
+  color: #00cbd2;
+}
+
 .page-2 .info .about {
 padding-bottom: 60px;
 line-height: 25px;
 color: #BDB6C6;
+text-align: justify;
 }
 
 .page-2 button {
@@ -269,46 +286,39 @@ color: #BDB6C6;
 
 .page-3 {
   background-color: black;
-  min-height: 150vh;
-  display: grid;
-  grid-template-rows: 20% 30%;
-  padding-top: 100px;
+  padding: 10px 90px 10px 90px;
+  text-align: center;
 }
 
 .page-3 .heading {
   font-size: 60px;
   font-weight: bold;
   color: white;
-  text-align: center;
-}
-
-.page-3 .skill {
-  color: white;
-  display: grid;
-  grid-template-columns: 30% 30%;
-  justify-content: center;
-  text-align: center;
-  column-gap: 50px;
-}
-
-.page-3 img {
-  max-width: 30%;
 }
 
 .page-3 .skill-heading {
   font-weight: bold;
   font-size: 20px;
-  margin: 20px;
+  color: white;
+  margin: 10px 0 10px 0;
 }
 
 .page-3 .info {
   color: #BDB6C6;
-  line-height: 25px;
   text-align: justify;
+  letter-spacing: 1px;
 }
 
-.page-3 .skill-1,.skill-2 {
-  background-color: rgb(38, 38, 38);
+.page-3 .skill-1, .skill-2 {
+  background-color: rgb(21, 21, 21);
+  text-align: center;
+  max-width: 300px;
+  display: inline-block;
+  margin: 70px 70px 0 70px;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 15px;
+}
+
+.page-3 img {
+  width: 30%;
 }
